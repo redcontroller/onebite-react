@@ -11,16 +11,12 @@ for (let i=1; i<=num; i++) {
 // - 함수 isPrimeNumber는 한 개의 매개변수 num을 제공받아 소수인지 판별합니다.
 // - 특별히 1도 소수로 판정합니다.
 function isPrimeNumber(num) {
-    let result = true;
-    for (let i=1; i<num; i++) {
-        if (num === 1) {
-            result = true;
-        }
-        if ((i !== 1) && (num % i === 0)) {
-            result = false;
+    for (let i=2; i<num; i++) {
+        if (num % i === 0) {
+            return false;
         }
     }
-    return result;
+    return true;
 }
 
 console.log(isPrimeNumber(1));
