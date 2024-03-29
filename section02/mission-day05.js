@@ -48,9 +48,20 @@ function printAvgScore(students) {
     }
     
     for (let student in students) {
-        const scores = students[student].scores;
+        const {scores} = students[student];
         console.log(`${student}: ${average(scores)}`);
     }
+
+    // for (let name in students) {
+    //     let sum = 0;
+    //     const { scores } = students[name];
+
+    //     for (let score of scores) {
+    //         sum += score;
+    //     }
+    //     const avg = sum / scores.length;
+    //     console.log(`${name}: ${avg}`);
+    // }
 }
 
 printAvgScore({
