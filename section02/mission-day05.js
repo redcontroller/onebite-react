@@ -43,13 +43,10 @@ printMovieReview({
 // 반복문을 활용하여 모든 학생의 개별 성적 평균을 출력합니다.
 // - "{이름}: {평균}" 형태로 출력합니다.
 function printAvgScore(students) {
-    const average = (arr) => {
-        return arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
-    }
-    
     for (let student in students) {
         const {scores} = students[student];
-        console.log(`${student}: ${average(scores)}`);
+        const average = scores.reduce((acc, curr) => acc + curr, 0) / scores.length;
+        console.log(`${student}: ${average}`);
     }
 
     // for (let name in students) {
