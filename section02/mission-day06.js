@@ -49,22 +49,10 @@ function printClickEventLogs(logs) {
 }
 
 printClickEventLogs([
-    {
-    type: "click",
-    date: "2023-01-01T12:00:00Z",
-    },
-    {
-    type: "hover",
-    date: "2023-01-01T12:10:00Z",
-    },
-    {
-    type: "scroll",
-    date: "2023-01-01T12:15:00Z",
-    },
-    {
-    type: "click",
-    date: "2023-01-01T12:20:00Z",
-    },
+    { type: "click", date: "2023-01-01T12:00:00Z", },
+    { type: "hover", date: "2023-01-01T12:10:00Z", },
+    { type: "scroll", date: "2023-01-01T12:15:00Z", },
+    { type: "click", date: "2023-01-01T12:20:00Z",  },
 ]);
 
 // 출력 결과
@@ -115,26 +103,16 @@ console.log(discountedMenus);
 // - 힌트 : 정렬 함수에는 sort와 toSorted가 있습니다.
 function getSortedBooks(books) {
     const updatedList = [...books];
-    return updatedList.sort((a, b) => b.published - a.published);
+    // return updatedList.sort((a, b) => b.published - a.published);
+    return updatedList.sort((a, b) => b.published.getTime() - a.published.getTime());
+    // return books.toSorted((a, b) => b.published - a.published);
 }
 
 const sortedBooks = getSortedBooks([
-    {
-    title: "한입 리액트",
-    published: new Date("2023. 04. 06"),
-    },
-    {
-    title: "웹 프론트엔드 첫 걸음",
-    published: new Date("2024. 04. 30"),
-    },
-    {
-    title: "이펙티브 타입스크립트",
-    published: new Date("2021. 06. 27"),
-    },
-    {
-    title: "클린코드",
-    published: new Date("2013. 12. 24"),
-    },
+    { title: "한입 리액트", published: new Date("2023. 04. 06"), },
+    { title: "웹 프론트엔드 첫 걸음", published: new Date("2024. 04. 30"), },
+    { title: "이펙티브 타입스크립트", published: new Date("2021. 06. 27"), },
+    { title: "클린코드", published: new Date("2013. 12. 24"), },
 ]);
 
 console.log(sortedBooks);
