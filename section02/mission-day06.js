@@ -105,7 +105,7 @@ function getSortedBooks(books) {
     const updatedList = [...books];
     // return updatedList.sort((a, b) => b.published - a.published);
     return updatedList.sort((a, b) => b.published.getTime() - a.published.getTime());
-    // return books.toSorted((a, b) => b.published - a.published);
+    // return books.toSorted((a, b) => b.published - a.published);  // node는 array.prototype.toSorted() 지원 안됨.
 }
 
 const sortedBooks = getSortedBooks([
