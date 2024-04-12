@@ -3,14 +3,16 @@ import './App.css';
 // import Main from './components/Main';
 // import Footer from './components/Footer';
 // import Button from './components/Button';
-import Bulb from './components/Bulb';
-import Count from './components/Count';
+
+// import Bulb from './components/Bulb';
+// import Count from './components/Count';
+
+import Resister from "./components/Register";
 
 // React 리렌더링 조건
 // 1. 자신이 가지고 있는 State가 변경되었을 때
 // 2. 자신이 제공받는 props의 값이 변경되었을 때
 // 3. 부모 컴포넌트가 리렌더링 되었을 때
-
 function App() {
   // const buttonProps = {
   //   text: "메일",
@@ -29,8 +31,9 @@ function App() {
         <Header/>
         {"hello"}
       </Button> */}
-      <Bulb />
-      <Count />
+      {/* <Bulb />
+      <Count /> */}
+      <Resister />
     </>
   );
 }
