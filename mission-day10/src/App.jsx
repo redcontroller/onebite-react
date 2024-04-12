@@ -4,7 +4,7 @@ import Welcome from './components/Welcome';
 function App() {
   const welcomeProps = {
     name: '홍길동',
-    isMember: true,
+    isMember: false,
   };
 
   return (
