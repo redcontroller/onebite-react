@@ -34,6 +34,7 @@ function App() {
       {/* <Bulb />
       <Count /> */}
       <Resister />
+      <Resister />
     </>
   );
 }
