@@ -7,7 +7,9 @@ import './App.css';
 // import Bulb from './components/Bulb';
 // import Count from './components/Count';
 
-import Resister from "./components/Register";
+// import Resister from "./components/Register";
+
+import HookExam from './components/HookExam';
 
 // React 리렌더링 조건
 // 1. 자신이 가지고 있는 State가 변경되었을 때
@@ -33,8 +35,11 @@ function App() {
       </Button> */}
       {/* <Bulb />
       <Count /> */}
-      <Resister />
-      <Resister />
+
+      {/* <Resister />
+      <Resister /> */}
+
+      <HookExam />
     </>
   );
 }

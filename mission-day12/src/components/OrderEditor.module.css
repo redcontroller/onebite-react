@@ -1,0 +1,3 @@
+select:focus-visible, input:focus-visible {
+    outline: #646cff auto 1px;
+}

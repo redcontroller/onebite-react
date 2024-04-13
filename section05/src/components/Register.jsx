@@ -48,10 +48,10 @@ const Resister = () => {
     // let count = 0; // 컴포넌트 내부에서 선언한 변수
 
     const onChange = (e) => {
-        // countRef.current++;
-        // console.log(countRef.current);
-        count++;
-        console.log(count); // 리렌더링 되면서 변수 값이 초기화 되서 계속 1 출력
+        countRef.current++;
+        console.log(countRef.current);
+        // count++;
+        // console.log(count); // 리렌더링 되면서 변수 값이 초기화 되서 계속 1 출력
 
         // console.log(e.target.name, e.target.value);
         setInput({
