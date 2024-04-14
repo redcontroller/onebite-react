@@ -1,0 +1,22 @@
+body {
+  padding: 20px;
+}
+
+input {
+  margin-left: 5px;
+}
+
+.App {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20px;
+  border: 1px solid rgb(240, 240, 240);
+}
