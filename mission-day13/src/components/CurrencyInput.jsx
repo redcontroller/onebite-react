@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import MultiplicationButton from "./MultiplicationButton";
 
 // const CurrencyInput = ({id, krwInput, setKrwInput, usdInput, setUsdInput, rate}) => {
 const CurrencyInput = ({id, value, onChange}) => {
@@ -10,9 +12,13 @@ const CurrencyInput = ({id, value, onChange}) => {
     //         setKrwInput(e.target.value * rate);
     //     }
     // }
+    const onClick = (e, multiplication) => {
+        e.preventDefault();
+        onChange(id, value * multiplication);
+    };
 
     return (
-        <div>
+        <div className="currencyInput">
             <label htmlFor={id}>{id.toUpperCase()}:</label>
             <input 
                 id={id}
@@ -25,6 +31,7 @@ const CurrencyInput = ({id, value, onChange}) => {
                 value={value}
                 onChange={(e) => onChange(id, e.target.value)}
             />
+            <MultiplicationButton onClick={onClick} />
         </div>
     );
 };
