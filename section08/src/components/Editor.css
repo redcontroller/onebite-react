@@ -10,6 +10,10 @@
     border-radius: 5px;
 }
 
+.Editor input:focus {
+    outline-color: rgb(37, 147, 255);
+}
+
 .Editor button {
     cursor: pointer;
     width: 80px;
