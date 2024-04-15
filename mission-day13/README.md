@@ -1,8 +1,6 @@
-# React + Vite
+# Day-13 Mission
+KRW <-> USD 환율 변환기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <img width="600px" src="https://github.com/redcontroller/onebite-react/assets/11751089/b0174511-63ef-47e8-9e94-9e2e51a0df7d" />
+</div>
