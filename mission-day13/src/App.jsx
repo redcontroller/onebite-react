@@ -17,6 +17,7 @@ function App() {
   return (
     <main className='App'>
       <h1>환율 변환기 (KRW=USD)</h1>
+      <h3 className='rate'>(적용 환율: {rate.toLocaleString()})</h3>
       <form className="form">
           <CurrencyInput
             id="krw"

@@ -20,3 +20,8 @@ input {
   border-radius: 20px;
   border: 1px solid rgb(240, 240, 240);
 }
+
+.rate {
+  font-size: 14px;
+  text-align: end;
+}
