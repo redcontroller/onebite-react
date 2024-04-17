@@ -60,7 +60,11 @@ li {
 
 .App > h1 {
     width: 100%;
+    padding: 0 15px;
+    margin-top: 50px;
+    margin-bottom: 0;
     text-align: left;
+    box-sizing: border-box;
 }
 
 @media (max-width: 360px) {
