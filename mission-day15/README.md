@@ -1,8 +1,28 @@
-# React + Vite
+# Day-15 Mission
+연락처 웹 애플리케이션 구현하기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 편의 기능
+- Enter 눌러도 추가됨
+- 이름이나 연락처를 입력 안하면 input으로 focus
+- 즐겨찾기가 가장 위에 위치하도록 정렬
 
-Currently, two official plugins are available:
+### 추가 및 즐겨찾기 기능
+<div align="center">
+  <img width="500px" src="https://github.com/redcontroller/onebite-react/assets/11751089/6d47c391-3d9b-4d42-be39-9e3ef494e295" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br >
+<br >
+
+### 검색 기능
+<div align="center">
+  <img width="500px" src="https://github.com/redcontroller/onebite-react/assets/11751089/400def27-cf12-430e-b5e2-fbe839f0524b" />
+</div>
+
+<br >
+<br >
+
+### 모바일 max-width:360px 반응형 구현
+<div align="center">
+  <img width="500px" src="https://github.com/redcontroller/onebite-react/assets/11751089/faa7871a-3913-4bfe-8146-4648e32b905d" />
+</div>
