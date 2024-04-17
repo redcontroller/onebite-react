@@ -31,6 +31,7 @@ button {
     background-color: white;
     border: 2px solid lightgray;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button:focus {
@@ -49,7 +50,36 @@ li {
 }
 
 .App {
+    min-width: 715px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    box-sizing: border-box;
+}
+
+.App > h1 {
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 360px) {
+    .App {
+        min-width: 330px;
+        gap: 10px;
+    }
+
+    .App>h1 {
+        font-size: 26px;
+        margin: 15px 0 0;
+    }
+
+    button {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    input {
+        padding: 5px;
+    }
 }

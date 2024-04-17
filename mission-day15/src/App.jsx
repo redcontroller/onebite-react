@@ -4,6 +4,27 @@ import ContactEditor from './components/ContactEditor';
 import ContactList from './components/ContactList';
 import Chance from 'chance';
 
+const chance = new Chance();
+const mockData = [];
+const startIdex = 6;
+for (let i=0; i<startIdex; i++) {
+  if (i%2 === 0) {
+    mockData.push({
+    id: i,
+    favorite: false,
+    name: chance.name({ prefix: true }),
+    contact: chance.email({ domain: "naver.com"}),
+    });
+  } else {
+    mockData.push({
+    id: i,
+    favorite: false,
+    name: chance.name(),
+    contact: chance.email({ domain: "gmail.com"}),
+    });
+  }
+}
+
 function reduce (state, action) {
   switch (action.type) {
     case "CREATE":
@@ -27,29 +48,8 @@ function reduce (state, action) {
 }
 
 function App() {
-  const chance = new Chance();
-  const mockData = [
-    {
-      id: 0,
-      favorite: false,
-      name: chance.name({ prefix: true }),
-      contact: chance.email({ domain: "naver.com"}),
-    },
-    {
-      id: 1,
-      favorite: false,
-      name: chance.name(),
-      contact: chance.email({ domain: "gmail.com"}),
-    },
-    {
-      id: 2,
-      favorite: false,
-      name: chance.name(),
-      contact: chance.email({ domain: "daum.net"}),
-    },
-  ];
   const [contacts, dispatch] = useReducer(reduce, mockData);
-  const idRef = useRef(3);
+  const idRef = useRef(startIdex);
 
   const onCreate = (name, contact) => {
     dispatch({
