@@ -5,8 +5,6 @@ import ContactList from './components/ContactList';
 import Chance from 'chance';
 
 function reduce (state, action) {
-  const favoriates = [];
-
   switch (action.type) {
     case "CREATE":
       return [ action.data, ...state ];
@@ -15,7 +13,7 @@ function reduce (state, action) {
     case "FAVORITE":
       return state.map((contact) => 
         contact.id === action.targetId
-        ? {...contact, favorite: !state.favorite}
+        ? {...contact, favorite: !contact.favorite}
         : contact
       );
     case "UPDATE":
@@ -83,14 +81,14 @@ function App() {
   };
 
   return (
-    <>
+    <div className='App'>
       <h1>Contact List</h1>
       <ContactEditor onCreate={onCreate} />
       <ContactList
         contacts={contacts}
         onDelete={onDelete}
         onUpdate={onUpdate} />
-    </>
+    </div>
   )
 }
 

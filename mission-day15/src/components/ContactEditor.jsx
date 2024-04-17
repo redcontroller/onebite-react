@@ -1,4 +1,5 @@
 import { useReducer, useRef } from 'react';
+import styles from "./ContactEditor.module.css";
 
 function reducer (state, action) {
     switch (action.type) {
@@ -22,14 +23,14 @@ const ContactEditor = ({ onCreate }) => {
         contact: "",
     });
 
-    const HandlerChange = (e) => {
+    const handleChange = (e) => {
         dispatch({
             type: "EDIT",
             target: e.target,
         });
     };
 
-    const HandlerClick = (e) => {
+    const handleClick = (e) => {
         e.preventDefault();
 
         if (info.name && info.contact) {
@@ -44,30 +45,40 @@ const ContactEditor = ({ onCreate }) => {
         }
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleClick(e);
+        }
+    };
+
     return (
-        <div>
-            <h2>Add Contact</h2>
-            <input
-                ref={nameRef}
-                name="name"
-                placeholder="이름 ..." 
-                value={info.name}
-                onChange={HandlerChange}
-            />
-            <input
-                ref={contactRef}
-                name="contact"
-                placeholder="연락처(이메일) ..."
-                value={info.contact}
-                onChange={HandlerChange}
-            />
+        <form className={styles.form}>
+            <h2>💡 Add Contact</h2>
+            <div className={styles.wrap}>
+                <input
+                    ref={nameRef}
+                    name="name"
+                    placeholder="이름 ..." 
+                    value={info.name}
+                    onChange={handleChange}
+                    onKeyDown={handleKeyDown}
+                />
+                <input
+                    ref={contactRef}
+                    name="contact"
+                    placeholder="연락처(이메일) ..."
+                    value={info.contact}
+                    onChange={handleChange}
+                    onKeyDown={handleKeyDown}
+                />
+            </div>
             <button
                 type='submit'
-                onClick={HandlerClick}
+                onClick={handleClick}
             >
                 Add
             </button>
-        </div>
+        </form>
     );
 };
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ContactItem from './ContactItem';
+import styles from './ContactList.module.css';
 
 
 const ContactList = ({ contacts, onDelete, onUpdate }) => {
@@ -18,11 +19,13 @@ const ContactList = ({ contacts, onDelete, onUpdate }) => {
     };
 
     return (
-        <ul>
+        <ul className={styles.ul}>
+            <h2>📒 Contact List</h2>
             <input
-                placeholder='이름으로 검색할 수 있어요'
+                placeholder='🔍 이름으로 검색할 수 있어요'
                 value={search}
-                onChange={onSearch} />
+                onChange={onSearch}
+            />
             {filteredData().map((contact) =>
                 <ContactItem
                     key={contact.id}
