@@ -61,6 +61,9 @@ function App() {
         contact: contact,
       },
     });
+    dispatch({
+      type: "UPDATE"
+    });
   }
 
   const onDelete = (targetId) => {
@@ -77,7 +80,7 @@ function App() {
     });
     dispatch({
       type: "UPDATE"
-    })
+    });
   };
 
   return (
