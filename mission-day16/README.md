@@ -1,8 +1,6 @@
 # Day-16 Mission
 
-연락처 웹 애플리케이션 구현하기
-/+) useReduce를 적용하기
-
+연락처 웹 애플리케이션 최적화 하기
 - useCallback과 React.memo를 활용
 - ContactItem 컴포넌트 렌더링 최적화하기
 - ContactEditor 컴포넌트의 불필요한 렌더링이 되지 않도록 최적화 수행
