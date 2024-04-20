@@ -107,6 +107,7 @@ function App() {
   // Provider에 value props에 들어갈 객체 리터럴을 memoization
   const memoizedDispatch = useMemo(() => {
     return { onCreate, onUpdate, onDelete };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
