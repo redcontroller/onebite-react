@@ -3,10 +3,8 @@ import styles from "./ContactEditor.module.css";
 import { ContactDispatchContext } from '../App';
 
 function reducer (state, action) {
-    console.log('render');
     switch (action.type) {
         case "EDIT":
-            console.log('render');
             return {
                 ...state,
                 [action.target.name]: action.target.value
@@ -22,7 +20,6 @@ const initialState = { name: "", contact: "" };
 const ContactEditor = () => {
     const nameRef = useRef();
     const contactRef = useRef();
-    // useCallback을 사용하여 reducer 함수 메모이제이션
     const [info, dispatch] = useReducer(reducer, initialState);
     const {onCreate} = useContext(ContactDispatchContext);
 
