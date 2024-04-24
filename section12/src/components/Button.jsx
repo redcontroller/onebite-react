@@ -1,6 +1,6 @@
 import './Button.css';
 
-const Button = ({text, type, onClick}) => {
+const Button = ({text, type = 'DEFAULT', onClick}) => {
     return (
         <button
             className={`Button Button_${type}`}
