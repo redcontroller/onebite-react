@@ -1,3 +1,7 @@
+<div align="center">
+  <img width="600px" src="https://github.com/redcontroller/onebite-react/assets/11751089/f37459c7-6f60-47e8-aa8a-4e9d2e2d44ac" />
+</div>
+
 # 웹 스토리지 이용하기
 
 ### Web Storage : 웹 브라우저 내장 DB
@@ -88,3 +92,7 @@ localStorage.clear(); // 모두 삭제
   - 강의 듣기, 스터디 나가기, 책 보기를 통해 나의 실력 빠르게 상승시키기
 - 4. 나의 실력을 낮추기 (모래주머니를 차기기)
   - 평소에 쓰는 라이브러리나 프레임워크를 사용하지 않고 모든 기능을 내가 전부 직접 구현해 보기를 해볼 수 있다.
+
+<div align="center">
+  <img width="600px" src="https://github.com/redcontroller/onebite-react/assets/11751089/2cced434-283a-4b50-ad76-64cdddab7a69" />
+</div>
